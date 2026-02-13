@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizan's Heart Gift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hearts-bg" id="hearts-bg"></div>
+
+    <section id="page1" class="page active">
+        <div class="valentine-container">
+            <h1 class="glow-text">Happy Valentine's Day! My Jaaan ! Eman !</h1>
+            <div class="heart-gift" onclick="nextPage(2)">
+                <div class="main-heart">❤️</div>
+                <div class="pulse"></div>
+            </div>
+            <p class="tap-hint">Tap the heart to open your gift</p>
+        </div>
+    </section>
+
+    <section id="page2" class="page">
+        <h1 class="title">Sweetest Memories</h1>
+        <div class="gallery-grid">
+            <div class="frame"><img src="./pictures/3cf8e2ab-f725-48de-9e1c-437d9c3b6983.jfif"></div>
+            <div class="frame"><img src="./pictures/b33de1cb-88d6-4033-b733-9936708f90bd.jfif"></div>
+            <div class="frame"><img src="./pictures/c33530e9-1fab-4808-b412-cb89c6b8e55b.jfif"></div>
+            <div class="frame"><img src="./pictures/ed322689-ca35-4c7a-8b59-41d491aa7215.jfif"></div>
+        </div>
+        <button class="nav-btn" onclick="nextPage(3)">See Surprise? ✨</button>
+    </section>
+
+    <section id="page3" class="page">
+        <div class="glass-card">
+            <h1>Ready for the Surprise?</h1>
+            <p>Kya aap dekhna chahte hain?</p>
+            <div class="btn-group">
+                <button class="nav-btn" onclick="nextPage(4)">Yes, My Heart! ❤️</button>
+                <button id="no-btn" class="nav-btn no" onmouseover="hideNo()">No</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page4" class="page">
+        <div class="final-reveal">
+            <div class="flower-box">
+                <img src="./pictures/flower.jfif" class="rose-img">
+            </div>
+            <div class="faizan-card">
+                <p>"Did you really think I wouldn't give you a rose? I always keep my promises—even if it is just a virtual one."</p>
+            </div>
+            <button class="restart-btn" onclick="location.reload()">Restart Journey 🌹</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

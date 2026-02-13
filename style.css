@@ -1,0 +1,75 @@
+:root {
+    --val-red: #ff4d6d;
+    --val-dark: #800f2f;
+    --soft-pink: #fff0f3;
+}
+
+body {
+    margin: 0; background: #1a0105;
+    font-family: 'Georgia', serif; color: white; overflow: hidden;
+}
+
+.page {
+    display: none; height: 100vh; width: 100%;
+    flex-direction: column; justify-content: center; align-items: center;
+}
+
+.active { display: flex; animation: fadeIn 0.8s ease; }
+
+/* Heart Animation */
+.heart-gift {
+    font-size: 100px; position: relative; cursor: pointer;
+    animation: beat 1s infinite alternate;
+}
+
+@keyframes beat {
+    to { transform: scale(1.2); }
+}
+
+.pulse {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--val-red); border-radius: 50%;
+    filter: blur(20px); opacity: 0.5; z-index: -1;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+}
+.frame img {
+    width: 150px; height: 150px; object-fit: cover;
+    border: 3px solid white; border-radius: 15px;
+}
+
+/* Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);
+    padding: 30px; border-radius: 20px; text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Final Message */
+.faizan-card {
+    background: white; color: #333; padding: 20px;
+    border-radius: 15px; margin-top: 20px; max-width: 400px;
+    box-shadow: 0 0 20px var(--val-red);
+}
+
+.faizan-card strong { color: var(--val-red); font-size: 1.5rem; }
+
+.rose-img {
+    width: 250px; border-radius: 50%; border: 4px solid white;
+    animation: zoomIn 1.5s ease-out;
+}
+
+/* Buttons */
+.nav-btn{
+    background: var(--val-red); border: none; color: white;
+    padding: 12px 30px; border-radius: 50px; cursor: pointer; margin-top: 20px;
+}
+.restart-btn{
+     background: var(--val-red); border: none; color: white;
+    padding: 12px 30px; border-radius: 50px; cursor: pointer; margin-top: 20px;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0); } to { transform: scale(1); } }
